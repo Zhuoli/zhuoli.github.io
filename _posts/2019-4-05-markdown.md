@@ -13,8 +13,8 @@ tags: markdown  #这里写标签
 
 [Visual Studio Code自带 Markdown Preview](https://code.visualstudio.com/Docs/languages/markdown)
 
-![all text](../assets/img/md-dynamic-preview.gif)
-![all text](https://github.com/Zhuoli/zhuoli.github.io/blob/master/assets/img/md-dynamic-preview.gif)
+![all text](../assets/img/md-dynamic-preview.gif?raw=true)
+![all text](https://github.com/Zhuoli/zhuoli.github.io/blob/master/assets/img/md-dynamic-preview.gif?raw=true)
 
 
 ---
