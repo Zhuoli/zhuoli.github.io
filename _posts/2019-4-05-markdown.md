@@ -150,7 +150,7 @@ s = "Python syntax highlighting"
 print s
 ```
 
-```cs
+```csharp
 //Hello World
 using System;
 class Solution
