@@ -9,6 +9,12 @@ tags: markdown  #这里写标签
 
 > markdown learning note.
 
+[Markdown终极教程](https://blog.ghost.org/markdown/) 
+
+[Visual Studio Code自带 Markdown Preview](https://code.visualstudio.com/Docs/languages/markdown)
+
+![all text](https://github.com/Zhuoli/zhuoli.github.io/blob/master/assets/img/md-dynamic-preview.gif)
+
 ---
 ## Headers:
 ---
@@ -77,5 +83,22 @@ Some text to show that the reference links can follow later.
 [1]: http://slashdot.org
 [link text itself]: http://www.reddit.com
 
+
+---
+
+Quotes
+
+\>
+> To be or not to be, that is the question
+
+---
+
+Code Snippets
+
+Some text with an inline `code` snippet
+
+ .my-link {
+        text-decoration: underline;
+    }
 
 ---
