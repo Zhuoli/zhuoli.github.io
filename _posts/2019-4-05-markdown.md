@@ -7,17 +7,17 @@ cover: 'http://on2171g4d.bkt.clouddn.com/jekyll-banner.png'
 tags: markdown  #这里写标签
 ---
 
-> markdown learning note.
+> 用Markdown来写日记.
 
-[Markdown终极教程](https://blog.ghost.org/markdown/) 
+部分内容来自于: [Markdown终极教程](https://blog.ghost.org/markdown/) 
 
-[Visual Studio Code自带 Markdown Preview](https://code.visualstudio.com/Docs/languages/markdown)
+推荐编辑器: [Visual Studio Code自带 Markdown 预览功能](https://code.visualstudio.com/Docs/languages/markdown)
 
 ![all text](https://github.com/Zhuoli/zhuoli.github.io/blob/master/assets/img/md-dynamic-preview.gif?raw=true)
 
 
 ---
-## Headers:
+## 文件标题 Headers:
 ---
 一个井号\#
 # H1
@@ -28,25 +28,33 @@ tags: markdown  #这里写标签
 
 Alternatively, for H1 and H2, an underline-ish style:
 
+多个等于号=====
+
 Alt-H1
 ======
+
+破折号------
 
 Alt-H2
 ------
 ---
-Emphasis
+## 着重符合
 
-Emphasis, aka italics, with *asterisks* or _underscores_.
+1. 用单个星号或者下划线来变成斜体, \*asterisks\* or \_underscores\_      
+    * *asterisks* or _underscores_.
 
-Strong emphasis, aka bold, with **asterisks** or __underscores__.
+2. 用双星号与双下划线来加粗, with \**asterisks\** or \__underscores\__
+    * **asterisks** or __underscores__
 
-Combined emphasis with **asterisks and _underscores_**.
+3. 将1与2结合起来用获得加粗斜体 with \**asterisks and _underscores_\**
+    * **asterisks and _underscores_**
 
-Strikethrough uses two tildes. ~~Scratch this.~~
+4. 用波浪线来划掉内容. \~~Scratch this.\~~
+    * ~~Scratch this.~~
 
 ---
 
-Lists
+## 列表 List
 1. First oder list
 2. ANother item
 ...* Unordered sub-list
@@ -60,19 +68,24 @@ Lists
 
 ---
 
-Links
+## 超链接 Links
 
-[I'm an inline-style link](https://www.google.com)
+1. \[inline stype](https://www.google.com)
+    * [I'm an inline-style link](https://www.google.com)
 
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+2. \[inline-style link with title](https://www.google.com "Google's Homepage")
+    * [I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+3. \[I'm a reference-style link][Arbitrary case-insensitive reference text]
+    * [I'm a reference-style link][Arbitrary case-insensitive reference text]
 
-[I'm a reference-style link][Arbitrary case-insensitive reference text]
+4. \[I'm a relative reference to a repository file](../blob/master/LICENSE)
+    * [I'm a relative reference to a repository file](../blob/master/LICENSE)
 
-[I'm a relative reference to a repository file](../blob/master/LICENSE)
+5. \[You can use numbers for reference-style link definitions][1]
+    * [You can use numbers for reference-style link definitions][1]
 
-[You can use numbers for reference-style link definitions][1]
-
-Or leave it empty and use the [link text itself].
+6. Or leave it empty and use the \[link text itself].
+    * Or leave it empty and use the [link text itself].
 
 URLs and URLs in angle brackets will automatically get turned into links. 
 http://www.example.com or <http://www.example.com> and sometimes 
@@ -80,21 +93,25 @@ example.com (but not on Github, for example).
 
 Some text to show that the reference links can follow later.
 
+\[arbitrary case-insensitive reference text]: https://www.mozilla.org
 [arbitrary case-insensitive reference text]: https://www.mozilla.org
+
+\[1]: http://slashdot.org
 [1]: http://slashdot.org
+\[link text itself]: http://www.reddit.com
 [link text itself]: http://www.reddit.com
 
 
 ---
 
-Quotes
+## 引用Quotes
 
-\>
-> To be or not to be, that is the question
+\> 生存还是毁灭，这是个问题
+> 生存还是毁灭，这是个问题
 
 ---
 
-Code Snippets
+## 代码片段 Code Snippets
 
 Some text with an inline `code` snippet
 
