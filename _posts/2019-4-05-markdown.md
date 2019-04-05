@@ -120,3 +120,66 @@ Some text with an inline `code` snippet
     }
 
 ---
+
+## 图片 Images
+
+Here's our logo (滑动鼠标见内容):
+
+1. Inline-style:
+
+\!\[alt text]\(https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+2. Reference-style: 
+\![alt text]\[logo]
+![alt text][logo]
+
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+\[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+
+## 代码与高亮 Code and Syntax Highlighting
+
+```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
+ 
+```python
+s = "Python syntax highlighting"
+print s
+```
+
+```cs
+//Hello World
+using System;
+class Solution
+{
+  static void Main(String[] args)
+  {
+    Console.WriteLine("Hello World!");
+  }
+}
+```
+
+```java
+public class HelloWorld {
+
+    public static void main(String[] args) {
+        // Prints "Hello, World" to the terminal window.
+        System.out.println("Hello, World");
+    }
+
+}
+```
+
+```
+No language indicated, so no syntax highlighting. 
+But let's throw in a <b>tag</b>.
+```
+var s = "JavaScript syntax highlighting";
+alert(s);
+s = "Python syntax highlighting"
+print s
+No language indicated, so no syntax highlighting in Markdown Here (varies on Github). 
+But let's throw in a <b>tag</b>.
