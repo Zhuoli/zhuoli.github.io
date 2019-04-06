@@ -139,16 +139,43 @@ Here's our logo (滑动鼠标见内容):
 \[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
 
 ## 代码与高亮 Code and Syntax Highlighting
+**用三个`加语言名称实现对应高亮**
+
+\```javascript
+
+var s = "JavaScript syntax highlighting";
+alert(s);
+
+\```
 
 ```javascript
 var s = "JavaScript syntax highlighting";
 alert(s);
 ```
- 
+ \```python
+
+s = "Python syntax highlighting"
+print s
+
+\```
+
 ```python
 s = "Python syntax highlighting"
 print s
 ```
+\```csharp
+
+//Hello World
+using System;
+class Solution
+{
+  static void Main(String[] args)
+  {
+    Console.WriteLine("Hello World!");
+  }
+}
+
+\```
 
 ```csharp
 //Hello World
@@ -161,6 +188,16 @@ class Solution
   }
 }
 ```
+\```java
+public class HelloWorld {
+
+    public static void main(String[] args) {
+        // Prints "Hello, World" to the terminal window.
+        System.out.println("Hello, World");
+    }
+
+}
+\```
 
 ```java
 public class HelloWorld {
