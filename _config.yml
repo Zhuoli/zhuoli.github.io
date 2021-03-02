@@ -1,7 +1,7 @@
 # Site settings 配置站点
-title: '面皮菜豆腐'
-description: '前端开发者，热爱技术&设计。很高兴能在这里与你分享我对技术和生活的思考。'
-keyword: '面皮菜豆腐, 面皮菜豆腐, 面皮菜豆腐的博客, 前端, 前端开发, 前端博客, javascript, vuejs, nodejs, 设计'
+title: 'Joly的树洞'
+description: 'Joly喜欢在这里写下一些日常思绪。'
+keyword: '面皮菜豆腐, Joly, K8S, Golang, 设计'
 url: '' # your host
 
 # if you don't need baseurl, you should leave this value blank.
@@ -17,10 +17,10 @@ footer:
   since: 2017
 
 # Author 配置博主信息
-author: '面皮菜豆腐'
+author: 'Joly'
 nickname: 'Jolly'
-bio: '前端开发者，热爱技术&设计，简单乐观爱创造'
-avatar: '/assets/img/profile.png'
+bio: 'Joly 是一名爱做发财梦的程序员'
+avatar: '/assets/img/xiamu.jpg'
 
 # Search
 search: true
@@ -49,9 +49,7 @@ postPatterns: 'glamorous'
 # SNS settings 配置社交网站
 # url: email, weibo, zhihu, twitter, instagram, juejin, github, douban, facebook, dribble, uicn, jianshu, medium, linkedin
 sns:
-  weibo: //blog.csdn.net/qq_41629498''  #微博
-  facebook: '//blog.csdn.net/qq_41629498' 
-  github: '//github.com/changjiapu/' 
+  github: '//github.com/zhuoli/' 
 
 # Tags 设置标签
 recommend-tags: true # whether or not display recommend-tags on the sidebar
