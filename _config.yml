@@ -7,6 +7,11 @@ url: '' # your host
 # if you don't need baseurl, you should leave this value blank.
 baseurl: ''
 
+theme                  : "minimal-mistakes-jekyll"
+# remote_theme           : "mmistakes/minimal-mistakes"
+minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
+
 # Navigation links
 nav:
   home: '/'
@@ -41,7 +46,7 @@ social-share: true
 social-share-items: ['wechat', 'weibo', 'douban', 'twitter']
 
 # theme color 主题皮肤
-theme-color: 'default'  # pink or default
+# theme-color: 'default'  # pink or default
 
 # Post header background patterns (when the post no cover): circuitBoard, overlappingCircles, food, glamorous, ticTacToe, seaOfClouds
 postPatterns: 'glamorous'
@@ -77,5 +82,3 @@ permalink: /:year/:month/:day/:title.html
 plugins: 
 - jekyll-paginate
 - jekyll-include-cache
-
-theme: minimal-mistakes-jekyll
