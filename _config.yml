@@ -7,9 +7,8 @@ url: '' # your host
 # if you don't need baseurl, you should leave this value blank.
 baseurl: ''
 
-theme                  : "jekyll-theme-minimal"
+theme: jekyll-theme-cayman
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 
 # Navigation links
