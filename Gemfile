@@ -10,4 +10,3 @@ gem "jekyll", "~> 4.2"
 gem "webrick"
 gem "github-pages", group: :jekyll_plugins
 gem 'jekyll-include-cache'
-gem "github-pages"
