@@ -1,0 +1,41 @@
+I"�	<ul>
+  <li><a href="#HTTP/2">What is Http/2</a></li>
+  <li><a href="#Websocket">What is Websocket</a></li>
+  <li><a href="#Reference">Reference</a></li>
+</ul>
+
+<hr />
+<h1 id="http2">HTTP/2</h1>
+<p><strong>Keypoint</strong>: Http/2 aims to improves performance and enables ‘Full-duplex’</p>
+
+<p>HTTP/1.1 is not efficient when used for HTML web browser. By the nature of TCP’s <a href="https://en.wikipedia.org/wiki/TCP_congestion_control">slow start</a>, each TCP connection will start transmation with a small buffer and slow speed and eventually increase it’s throughput. Such design favors the long connection against short connection.  Http/1.1 start a new TCP for each small piece of its web asset, hence on average, those small assets are transfered at a lower speed during “TCP Slow Start”.</p>
+
+<p><img src="/assets/img/TCPCongestion.jpg" alt="TCP Congestion" /></p>
+
+<p>HTTP/1.1 is textual. Plantext is human-friendly but less space efficient to wire.</p>
+
+<p>Http/1.1 is monodirectional, it’s always the client to initialize a connection, and service response passively. A downside performance bottleneck is Web client has to parse previous response before starting a new pull request to get the content/asset in previouse response.</p>
+
+<p>Features in Http/2.0</p>
+<ol>
+  <li>HTTP/2 is binary protocol where HTTP1.x is textual</li>
+  <li>HTTP/2 is multiplexed to tackle a known limitation in networking known as <a href="#head-of-line-block">head-of-line blocking</a></li>
+  <li>HTTP/2 use header compression to reduce overhead.</li>
+  <li>HTTP/2 Server Push allows servers to proactively send response into client caches.</li>
+</ol>
+
+<h1 id="websocket">WebSocket</h1>
+<hr />
+
+<p>To Be Continued…</p>
+
+<hr />
+<h1 id="head-of-line-block">Head of line block</h1>
+<p>HTTP / 1.1 to achieve a plurality of requests transmitted by the disposable conduit pipelining techniques in order to increase throughput and performance, such as sequence 2 in the figure above. However, this technique upon receiving the response, requirements must be returned in order of transmission requests. If the first request is blocked, even if the request is later processed, the need to wait, as the above figure 3 sequence.
+<img src="/assets/img/hol-block.jpg" alt="Head of line block" /></p>
+
+<h1 id="reference">Reference</h1>
+<ol>
+  <li><a href="https://www.infoq.com/articles/websocket-and-http2-coexist/">Will WebSocket survive Http/2?</a></li>
+</ol>
+:ET

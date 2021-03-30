@@ -1,0 +1,32 @@
+I"<blockquote>
+  <p>Jekyll.</p>
+</blockquote>
+
+<h3 id="编译与启动">编译与启动</h3>
+
+<ul>
+  <li>jekyll build - to builds the site and outputs a stitic site to a directory called _site</li>
+  <li>jekyll serve - Does the same thing except it rebuilds any time you make a change and runs a local web server at http://localhost:4000</li>
+</ul>
+
+<h2 id="jekyll-与-markdown">Jekyll 与 Markdown</h2>
+
+<p>Jekyll使用的是<a href="https://kramdown.gettalong.org/">kramdown</a>做markdown的渲染, 高亮用的是<a href="https://github.com/jneen/rouge">rough</a>
+配置内容：</p>
+
+<p><strong>_config.yml</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Markdown
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+</code></pre></div></div>
+
+<h2 id="prism-与代码高亮"><a href="https://prismjs.com/download.html#themes=prism&amp;languages=markup+css+clike+javascript">Prism</a> 与代码高亮</h2>
+<p>通过prismjs的高亮css,js文件实现Jekyll对代码高亮的支持。
+你可以在<a href="https://prismjs.com/download.html#themes=prism&amp;languages=markup+css+clike+javascript">Prism</a>选择你要的主题与高亮语言，它会自动生成对应的css,js文件。 将其放置在你的Jekyll ./assets/css 与./assets/js文件下方即可
+例子 https://prismjs.com/index.html#examples</p>
+
+<p><img src="https://raw.githubusercontent.com/Zhuoli/zhuoli.github.io/master/assets/img/prismHighlight.png" alt="alt text" title="Logo Title Text 1" /></p>
+
+:ET

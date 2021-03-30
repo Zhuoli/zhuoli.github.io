@@ -1,0 +1,247 @@
+I"�!<blockquote>
+  <p>用Markdown来写日记.</p>
+</blockquote>
+
+<p>部分内容来自于: <a href="https://blog.ghost.org/markdown/">Markdown终极教程</a></p>
+
+<p>推荐编辑器: <a href="https://code.visualstudio.com/Docs/languages/markdown">Visual Studio Code自带 Markdown 预览功能</a></p>
+
+<p><img src="https://github.com/Zhuoli/zhuoli.github.io/blob/master/assets/img/md-dynamic-preview.gif?raw=true" alt="all text" /></p>
+
+<hr />
+<h2 id="文件标题-headers">文件标题 Headers:</h2>
+<hr />
+<p>一个井号#</p>
+<h1 id="h1">H1</h1>
+<p>两个井号##</p>
+<h2 id="h2">H2</h2>
+<p>三个井号###</p>
+<h3 id="h3">H3</h3>
+
+<p>Alternatively, for H1 and H2, an underline-ish style:</p>
+
+<p>多个等于号=====</p>
+
+<h1 id="alt-h1">Alt-H1</h1>
+
+<p>破折号——</p>
+
+<h2 id="alt-h2">Alt-H2</h2>
+<hr />
+<h2 id="着重符合">着重符合</h2>
+
+<ol>
+  <li>用单个星号或者下划线来变成斜体, *asterisks* or _underscores_
+    <ul>
+      <li><em>asterisks</em> or <em>underscores</em>.</li>
+    </ul>
+  </li>
+  <li>用双星号与双下划线来加粗, with *<em>asterisks*</em> or _<em>underscores_</em>
+    <ul>
+      <li><strong>asterisks</strong> or <strong>underscores</strong></li>
+    </ul>
+  </li>
+  <li>将1与2结合起来用获得加粗斜体 with *<em>asterisks and _underscores_*</em>
+    <ul>
+      <li><strong>asterisks and <em>underscores</em></strong></li>
+    </ul>
+  </li>
+  <li>用波浪线来划掉内容. ~~Scratch this.~~
+    <ul>
+      <li><del>Scratch this.</del></li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="列表-list">列表 List</h2>
+<ol>
+  <li>First oder list</li>
+  <li>ANother item
+…* Unordered sub-list</li>
+  <li>Actual number doesnt matter just that its a number
+..1. Ordered sub-list</li>
+  <li>And another item.</li>
+</ol>
+
+<ul>
+  <li>Unordered list can use asterisks</li>
+  <li>or minuses</li>
+  <li>or pluses</li>
+</ul>
+
+<hr />
+
+<h2 id="超链接-links">超链接 Links</h2>
+
+<ol>
+  <li>[inline stype](https://www.google.com)
+    <ul>
+      <li><a href="https://www.google.com">I’m an inline-style link</a></li>
+    </ul>
+  </li>
+  <li>[inline-style link with title](https://www.google.com “Google’s Homepage”)
+    <ul>
+      <li><a href="https://www.google.com" title="Google's Homepage">I’m an inline-style link with title</a></li>
+    </ul>
+  </li>
+  <li>[I’m a reference-style link][Arbitrary case-insensitive reference text]
+    <ul>
+      <li>[I’m a reference-style link][Arbitrary case-insensitive reference text]</li>
+    </ul>
+  </li>
+  <li>[I’m a relative reference to a repository file](../blob/master/LICENSE)
+    <ul>
+      <li><a href="../blob/master/LICENSE">I’m a relative reference to a repository file</a></li>
+    </ul>
+  </li>
+  <li>[You can use numbers for reference-style link definitions][1]
+    <ul>
+      <li>[You can use numbers for reference-style link definitions][1]</li>
+    </ul>
+  </li>
+  <li>Or leave it empty and use the [link text itself].
+    <ul>
+      <li>Or leave it empty and use the [link text itself].</li>
+    </ul>
+  </li>
+</ol>
+
+<p>URLs and URLs in angle brackets will automatically get turned into links. 
+http://www.example.com or <a href="http://www.example.com">http://www.example.com</a> and sometimes 
+example.com (but not on Github, for example).</p>
+
+<p>Some text to show that the reference links can follow later.</p>
+
+<p>[arbitrary case-insensitive reference text]: https://www.mozilla.org
+[arbitrary case-insensitive reference text]: https://www.mozilla.org</p>
+
+<p>[1]: http://slashdot.org
+[1]: http://slashdot.org
+[link text itself]: http://www.reddit.com
+[link text itself]: http://www.reddit.com</p>
+
+<hr />
+
+<h2 id="引用quotes">引用Quotes</h2>
+
+<p>&gt; 生存还是毁灭，这是个问题</p>
+<blockquote>
+  <p>生存还是毁灭，这是个问题</p>
+</blockquote>
+
+<hr />
+
+<h2 id="代码片段-code-snippets">代码片段 Code Snippets</h2>
+
+<p>Some text with an inline <code class="language-plaintext highlighter-rouge">code</code> snippet</p>
+
+<p>.my-link {
+        text-decoration: underline;
+    }</p>
+
+<hr />
+
+<h2 id="图片-images">图片 Images</h2>
+
+<p>Here’s our logo (滑动鼠标见内容):</p>
+
+<ol>
+  <li>Inline-style:</li>
+</ol>
+
+<p>![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png “Logo Title Text 1”)</p>
+
+<p><img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" alt="alt text" title="Logo Title Text 1" /></p>
+
+<ol>
+  <li>Reference-style: 
+![alt text][logo]
+<img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" alt="alt text" title="Logo Title Text 2" /></li>
+</ol>
+
+<p>[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png “Logo Title Text 2”</p>
+
+<h2 id="代码与高亮-code-and-syntax-highlighting">代码与高亮 Code and Syntax Highlighting</h2>
+<p><strong>用三个`加语言名称实现对应高亮</strong></p>
+
+<p>```javascript</p>
+
+<p>var s = “JavaScript syntax highlighting”;
+alert(s);</p>
+
+<p>```</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">JavaScript syntax highlighting</span><span class="dl">"</span><span class="p">;</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
+</code></pre></div></div>
+<p>```python</p>
+
+<p>s = “Python syntax highlighting”
+print s</p>
+
+<p>```</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">s</span> <span class="o">=</span> <span class="s">"Python syntax highlighting"</span>
+<span class="k">print</span> <span class="n">s</span>
+</code></pre></div></div>
+<p>```csharp</p>
+
+<p>//Hello World
+using System;
+class Solution
+{
+  static void Main(String[] args)
+  {
+    Console.WriteLine(“Hello World!”);
+  }
+}</p>
+
+<p>```</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//Hello World</span>
+<span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">class</span> <span class="nc">Solution</span>
+<span class="p">{</span>
+  <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"Hello World!"</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>```java
+public class HelloWorld {</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public static void main(String[] args) {
+    // Prints "Hello, World" to the terminal window.
+    System.out.println("Hello, World");
+}
+</code></pre></div></div>
+
+<p>}
+```</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloWorld</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// Prints "Hello, World" to the terminal window.</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Hello, World"</span><span class="o">);</span>
+    <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>No language indicated, so no syntax highlighting. 
+But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
+</code></pre></div></div>
+<p>var s = “JavaScript syntax highlighting”;
+alert(s);
+s = “Python syntax highlighting”</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print s
+</code></pre></div></div>
+
+<p>No language indicated, so no syntax highlighting in Markdown Here (varies on Github). 
+But let’s throw in a <b>tag</b>.</p>
+:ET

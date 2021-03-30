@@ -1,0 +1,61 @@
+I"�	<blockquote>
+  <p>使用ApiVersionConventionBuilder来注册controller并申明apiversion.</p>
+</blockquote>
+
+<h3 id="可以用-aspnet-api-versionning-library来注册controller并限制version-如果不想要version可以使用isapiversionneutral">可以用 <a href="https://github.com/Microsoft/aspnet-api-versioning">aspnet-api-versionning library</a>来注册controller并限制version， 如果不想要version可以使用IsApiVersionNeutral</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    private static void ConfigureApiVersioning(HttpConfiguration config)
+    {
+        // Enable API versioning. Each API will require (unless opted out) ?api-version={version}
+        config.AddApiVersioning(options =&gt;
+        {
+            // register cancel controller api version
+            var cancelSubscriptionApiVersion = new ApiVersion(DateTime.Parse(asyncVersionString, CultureInfo.InvariantCulture));
+            MarketplaceCommerceApiLogger.Instance.LogInformation("Configuring cancel orders api version as " + cancelSubscriptionApiVersion);
+            options.Conventions.Controller&lt;CancelSubscriptionController&gt;().HasApiVersion(cancelSubscriptionApiVersion);
+
+            // API opted out.
+            options.Conventions.Controller&lt;DiagnosticController&gt;().IsApiVersionNeutral();
+        });
+    }
+
+    public static void Register(HttpConfiguration config)
+    {
+        ConfigureIocContainer(config);
+        ConfigureCors(config);
+        ConfigureApiVersioning(config);
+
+        // Web API routes
+        config.MapHttpAttributeRoutes();
+
+        // Setup global exception handler and loggers
+        // https://docs.microsoft.com/en-us/aspnet/web-api/overview/error-handling/web-api-global-error-handling
+        config.Services.Replace(typeof(IExceptionLogger), new ApiExceptionLogger());
+        config.Services.Replace(typeof(IExceptionHandler), new ApiGlobalExceptionHandler());
+
+        // Configure Serialization
+        config.Formatters.JsonFormatter.UseDataContractJsonSerializer = false;
+    }
+
+    Startup.cs
+
+
+
+    public void Configuration(IAppBuilder app)
+    {
+        try
+        {
+            HttpConfiguration config = new HttpConfiguration();
+
+            app.Use&lt;IncomingRequestTraceMiddleware&gt;();
+
+            WebApiConfig.Register(config);
+            app.UseWebApi(config);
+        }
+        catch (Exception ex)
+        {
+            ....
+        }
+    }
+</code></pre></div></div>
+:ET

@@ -1,0 +1,49 @@
+I"<p>左耳听风读书记录：Linux系统、内存和网络</p>
+
+<p>来源： <a href="https://time.geekbang.org/column/article/9759">左耳听风77</a></p>
+
+<h2 id="linux">Linux</h2>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/">Red Hat Enterprise Linux文档</a></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><a href="https://0xax.gitbooks.io/linux-insides/content/index.html">Linux Insides</a></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><a href="http://lwn.net/Kernel/Index/">LWN’s kernel page</a>上面有很多非常不错的文章来解释Linux内核的一些东西</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><a href="https://www.kernel.org/doc/">Linux Kernel Doc</a></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><a href="http://planet.kernel.org/">Kernel Planet</a> Linux内核开发者的Blog</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><a href="http://learnlinuxconcepts.blogspot.com/2014/10/this-blog-is-to-help-those-students-and.html">Learn Linux Kernel from Android Perspective</a> 从Android的角度来学习Linux内核</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><a href="https://blogs.dropbox.com/tech/2017/09/optimizing-web-servers-for-high-throughput-and-low-latency/">Optimizing web servers for high throughput and low latency</a>一篇非常底层的系统调优的文章</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><a href="https://notes.shichao.io/lkd/ch1/#the-linux-kernel-development-community">Linux shichao note</a></li>
+</ul>
+
+<h2 id="memory">Memory</h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />LWN.net <a href="http://futuretech.blinkenlights.nl/misc/cpumemory.pdf">What every programmer should know about memory</a>
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" /><a href="https://lwn.net/Articles/250967/">Introduction</a>
+        <ul>
+          <li>DRAM相较于SRAM因为使用了电容，电压转换不是方波所以读写时间满了很多。优点是比SRAM便宜</li>
+        </ul>
+      </li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" /><a href="https://lwn.net/Articles/252125/">CPU caches</a>
+        <ul>
+          <li>SRAM多做Cache</li>
+        </ul>
+      </li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><a href="http://lwn.net/Articles/253361/">Virtual memory</a></li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><a href="http://lwn.net/Articles/254445/">NUMA systems</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="计算机网络">计算机网络</h2>
+<h3 id="网络学习">网络学习</h3>
+
+<h3 id="网络调优">网络调优</h3>
+
+<h3 id="网络协议">网络协议</h3>
+<p>… TO BE CONTINUE</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><a href="https://github.com/binhnguyennus/awesome-scalability/blob/master/README.md">Awesome scalability</a></li>
+</ul>
+:ET

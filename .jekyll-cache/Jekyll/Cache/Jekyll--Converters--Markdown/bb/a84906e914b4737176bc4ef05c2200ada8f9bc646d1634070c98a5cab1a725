@@ -1,0 +1,2 @@
+I"<p>在开发Kubernetes应用时，我们有时需要操作node level resources, 这时候就不能做个简单的 pod deployment (类似沙盒 不会碰node resources)。 现在就可以用 <a href="https://github.com/kvaps/kubectl-node-shell">node-shell</a>这一插件。</p>
+:ET

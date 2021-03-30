@@ -1,0 +1,30 @@
+I"�<p>在开发Kubernetes应用时，我们有时需要操作node level resources, 这时候就不能做个简单的 pod deployment (类似沙盒 不会碰node resources)。 现在就可以用 <a href="https://github.com/kvaps/kubectl-node-shell">node-shell</a>这一插件。</p>
+
+<p>` Start a root shell in the node’s host OS running.`</p>
+
+<p>一个用例就是主动删掉旧的 docker images, 虽然k8s有Garbage Collection机制， 但它是被动的按disk usage 百分比触发的。也就是说，当我们需要主动删掉旧image时就可以使用 <code class="language-plaintext highlighter-rouge">node-shell</code></p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nb">echo</span> <span class="s2">"Cleaning up old images..."</span>
+<span class="nb">echo</span> <span class="s2">"Installing kubectl node shell..."</span>
+<span class="c"># https://github.com/kvaps/kubectl-node-shell</span>
+curl <span class="nt">-LO</span> https://github.com/kvaps/kubectl-node-shell/raw/master/kubectl-node_shell
+<span class="nb">chmod</span> +x ./kubectl-node_shell
+<span class="nb">sudo mv</span> ./kubectl-node_shell /usr/local/bin/kubectl-node_shell
+<span class="nb">echo</span> <span class="s2">"Done"</span>
+
+<span class="nv">names</span><span class="o">=</span><span class="si">$(</span>kubectl get node <span class="nt">-o</span> json | jq <span class="s1">'.items[].metadata.name'</span> <span class="nt">-r</span><span class="si">)</span>
+<span class="nv">nodecount</span><span class="o">=</span><span class="si">$(</span><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$names</span><span class="s2">"</span> | <span class="nb">wc</span> <span class="nt">-l</span><span class="si">)</span>
+<span class="nb">echo</span> <span class="s2">"Kubernetes underlay has </span><span class="nv">$nodecount</span><span class="s2"> vm instances, going to prune docker images one by one"</span>
+
+<span class="c"># loop </span>
+<span class="k">while </span><span class="nv">IFS</span><span class="o">=</span> <span class="nb">read</span> <span class="nt">-r</span> nodename<span class="p">;</span> <span class="k">do
+    </span><span class="nb">echo</span> <span class="s2">"**************** prude node: </span><span class="nv">$nodename</span><span class="s2"> ****************"</span>
+    kubectl node-shell <span class="nv">$nodename</span> <span class="nt">--</span> sh <span class="nt">-c</span> <span class="s1">'yes | docker image prune'</span>
+    <span class="nb">echo</span> <span class="s2">"**************** Done ****************"</span>
+<span class="k">done</span> <span class="o">&lt;&lt;&lt;</span> <span class="s2">"</span><span class="nv">$names</span><span class="s2">"</span>
+<span class="nb">echo</span> <span class="s2">"********************** END **************************"</span>
+<span class="nb">echo</span> <span class="s2">"Prune finished"</span>
+
+</code></pre></div></div>
+:ET
