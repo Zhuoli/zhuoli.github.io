@@ -35,3 +35,45 @@ kind get clusters
 kubectl get nodes
 # Check the services for the whole cluster
 kubectl get all --all-namespaces
+```
+
+
+## 安装helm并部署你的第一个k8s service
+helm可以帮助你部署k8s service, 参考helm主页: https://helm.sh/docs/intro/quickstart/
+
+1. Create a example service using helm and create namespace if it does not exist
+```bash
+helm install bitnami/mysql --generate-name --create-namespace --namespace zhuolins
+```
+
+
+Tip:
+
+  Watch the deployment status using the command:` kubectl get pods -w --namespace zhuolins`
+
+Services:
+``` bash
+  echo Primary: mysql-1622777550.zhuolins.svc.cluster.local:3306
+```
+Administrator credentials:
+```bash
+  echo Username: root
+  echo Password : $(kubectl get secret --namespace zhuolins mysql-1622777550 -o jsonpath="{.data.mysql-root-password}" | base64 --decode)
+```
+To connect to your database:
+
+  1. Run a pod that you can use as a client:
+```bash
+      kubectl run mysql-1622777550-client --rm --tty -i --restart='Never' --image  docker.io/bitnami/mysql:8.0.25-debian-10-r16 --namespace zhuolins --command -- bash
+```
+  2. To connect to primary service (read/write):
+```bash
+      mysql -h mysql-1622777550.zhuolins.svc.cluster.local -uroot -p my_database
+```
+To upgrade this helm chart:
+
+  1. Obtain the password as described on the 'Administrator credentials' section and set the 'root.password' parameter as shown below:
+```bash
+      ROOT_PASSWORD=$(kubectl get secret --namespace zhuolins mysql-1622777550 -o jsonpath="{.data.mysql-root-password}" | base64 --decode)
+      helm upgrade --namespace zhuolins mysql-1622777550 bitnami/mysql --set auth.rootPassword=$ROOT_PASSWORD
+```
