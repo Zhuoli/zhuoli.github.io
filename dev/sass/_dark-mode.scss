@@ -1,0 +1,72 @@
+// Dark mode styles
+.dark-theme {
+    background-color: #1a1a1a;
+    color: #ffffff;
+
+    .g-banner,
+    .article-item,
+    .g-sidebar-wrapper {
+        background-color: #2a2a2a;
+    }
+
+    .article-item .post-cover img {
+        filter: brightness(0.8);
+    }
+
+    .article-item .post-preview .post-title,
+    .article-item .post-preview .post-subtitle,
+    .article-item .post-preview .post-excerpt {
+        color: #e0e0e0;
+    }
+
+    .article-item .post-meta .post-tags,
+    .article-item .post-meta .post-date {
+        color: #b0b0b0;
+    }
+
+    .g-sidebar section {
+        border-bottom-color: #3a3a3a;
+    }
+
+    .search-card input {
+        background-color: #2a2a2a;
+        color: #e0e0e0;
+    }
+
+    .markdown-body {
+        color: #e0e0e0;
+    }
+}
+
+// Updated theme toggle button styles
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+#theme-toggle span {
+    display: inline-block;
+}
+
+#theme-toggle .sun-icon {
+    display: none;
+}
+
+.dark-theme #theme-toggle .moon-icon {
+    display: none;
+}
+
+.dark-theme #theme-toggle .sun-icon {
+    display: inline-block;
+}

@@ -1,10 +1,16 @@
 ---
 layout: default
-home-title: Joly的日常欢乐.
+home-title: 阿力的日常欢乐.
 description: 日常碎碎记
 header-img: /assets/img/SNV33911.JPG
 ---
 {% include header.html %}
+
+<!-- Replace the button content with Unicode characters -->
+<button id="theme-toggle" aria-label="Toggle dark mode">
+    <span class="moon-icon">🌙</span>
+    <span class="sun-icon">☀️</span>
+</button>
 
 <div
     class="g-banner home-banner {{ site.theme-color | prepend: 'banner-theme-' }}"
@@ -102,3 +108,29 @@ header-img: /assets/img/SNV33911.JPG
 </main>
 
 {% include footer.html %}
+
+<!-- Add this before closing body tag -->
+<script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    const moonIcon = themeToggle.querySelector('.moon-icon');
+    const sunIcon = themeToggle.querySelector('.sun-icon');
+
+    function setTheme(theme) {
+        body.classList.toggle('dark-theme', theme === 'dark');
+        moonIcon.style.display = theme === 'light' ? 'inline-block' : 'none';
+        sunIcon.style.display = theme === 'dark' ? 'inline-block' : 'none';
+        localStorage.setItem('theme', theme);
+    }
+
+    themeToggle.addEventListener('click', () => {
+        const newTheme = body.classList.contains('dark-theme') ? 'light' : 'dark';
+        setTheme(newTheme);
+    });
+
+    // Set initial theme
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
+</script>
+</body>
+</html>

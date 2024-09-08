@@ -1,7 +1,7 @@
 # Site settings 配置站点
-title: 'Joly的树洞'
-description: 'Joly喜欢在这里写下一些日常思绪。'
-keyword: '面皮菜豆腐, Joly, K8S, Golang, 设计'
+title: '阿力的日记本'
+description: '阿力喜欢在这里写下一些日常思绪。'
+keyword: '阿力, K8S, Golang, 设计'
 url: '' # your host
 
 # if you don't need baseurl, you should leave this value blank.
@@ -21,16 +21,16 @@ footer:
   since: 2017
 
 # Author 配置博主信息
-author: 'Joly'
-nickname: 'Jolly'
-bio: 'Joly 是一名爱做发财梦的程序员'
+author: 'Zhuoli'
+nickname: '阿力'
+bio: '记录下一些重要信息'
 avatar: '/assets/img/xiamu.jpg'
 
 # Search
 search: true
 
 # Night mode   夜间模式设定  false关闭
-nightMode: true
+nightMode: false
 
 # Comments 评论功能
 comments:
